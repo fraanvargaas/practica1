@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class respawn : MonoBehaviour
 {
-	private string playerTag = "Player";
-	public Transform InitialPosition;
-    
-
-    private void OnTriggerEnter(Collider other)
+	private void Update()
 	{
-		if (other.gameObject.CompareTag(playerTag))
+		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-       
+			Cursor.lockState = CursorLockMode.None;
+			Time.timeScale = 0;
 		}
 	}
 }
