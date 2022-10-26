@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class puertaPrincipal : MonoBehaviour
 {
+
 	public Animator lapuerta;
 	private bool enzona;
 	private bool activa;
@@ -40,3 +41,4 @@ public class puertaPrincipal : MonoBehaviour
 		}
 	}
 }
+
