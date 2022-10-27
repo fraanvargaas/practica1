@@ -14,7 +14,6 @@ public class LevelManager : MonoBehaviour
 			nextScene = 0;
 		}
 		Cursor.lockState = CursorLockMode.None;
-		Time.timeScale = 1;
 		SceneManager.LoadScene(nextScene);
 	}
 

@@ -8,5 +8,6 @@ public class final : PlayerTrigger
 	{
 		LevelManager levelManager = GetComponent<LevelManager>();
 		levelManager.NextLevel();
+		
 	}
 }
