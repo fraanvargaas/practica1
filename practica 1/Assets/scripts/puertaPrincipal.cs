@@ -37,7 +37,7 @@ public class puertaPrincipal : MonoBehaviour
 	{
 		if (other.tag == "Player")
 		{
-			_ = enzona == false;
+			enzona = false;
 		}
 	}
 }

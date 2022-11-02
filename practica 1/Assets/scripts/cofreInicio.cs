@@ -8,6 +8,8 @@ public class cofreInicio : MonoBehaviour
 	private bool enzona;
 	private bool activa;
 	public GameObject texto;
+	public GameObject llavefist;
+	public bool llave;
 
 	private void Update()
 	{
@@ -17,12 +19,10 @@ public class cofreInicio : MonoBehaviour
 			if (activa == true)
 			{
 				Cofre.SetBool("cofre", true);
+				texto.SetActive(true);
 			}
-			if (activa == false)
-			{
-				Cofre.SetBool("cofre", false);
-			}
-			texto.SetActive(true);
+			
+			
 		}
 	}
 
@@ -38,7 +38,8 @@ public class cofreInicio : MonoBehaviour
 	{
 		if (other.tag == "Player")
 		{
-			_ = enzona == false;
+            enzona = false;
 		}
 	}
+	
 }
