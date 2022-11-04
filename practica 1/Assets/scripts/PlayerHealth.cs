@@ -16,7 +16,10 @@ public class PlayerHealth : MonoBehaviour
 	{
 		InitialPosition = transform.position;
 		currentHealth = MaxHealth;
-		healthText.text = currentHealth.ToString();
+		if (healthText != null)
+		{
+			healthText.text = currentHealth.ToString();
+		}
 	}
 
 	public void TakeDamage(int damageTaken)
