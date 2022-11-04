@@ -8,7 +8,8 @@ public class puertaPrincipal : MonoBehaviour
 	public Animator lapuerta;
 	private bool enzona;
 	private bool activa;
-
+	public GameObject sonido;
+	public GameObject sonido2;
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.E) && enzona == true)
@@ -17,11 +18,9 @@ public class puertaPrincipal : MonoBehaviour
 			if (activa == true)
 			{
 				lapuerta.SetBool("puertaActiv", true);
+				sonido.SetActive(true);
 			}
-			if (activa == false)
-			{
-				lapuerta.SetBool("puertaActiv", false);
-			}
+			
 		}
 	}
 
@@ -38,6 +37,8 @@ public class puertaPrincipal : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			enzona = false;
+			lapuerta.SetBool("puertaActiv", false);
+			sonido2.SetActive(true);
 		}
 	}
 }
